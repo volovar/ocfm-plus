@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+
+  "name": "OCFM plus",
+  "short_name": "ocfm+",
+  "description": "Enhances overcast.fm with updates to the styling and layout",
+  "version": "2.0",
+  "author": "volovar.com",
+
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+
+  "permissions": ["activeTab"],
+
+  "browser_action": {
+    "default_icon": {
+      "19": "img/icon19.png",
+      "38": "img/icon38.png"
+    }
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://overcast.fm/*"],
+      "css": ["styles.css"],
+      "js": ["index.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": ["img/*png"]
+}

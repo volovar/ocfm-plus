@@ -1,2 +1,5 @@
+node_modules
+dist
+
 #ignore mac system files
 .DS_store
