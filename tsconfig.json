@@ -2,17 +2,28 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
+    "baseUrl": ".",
     "declaration": false,
     "experimentalDecorators": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
     "lib": ["dom", "es2017"],
     "moduleResolution": "node",
     "module": "esnext",
-    "target": "es2017",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "jsx": "react",
-    "jsxFactory": "h"
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "target": "es2017",
+    "types": ["@types/chrome", "@types/jquery"]
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }
