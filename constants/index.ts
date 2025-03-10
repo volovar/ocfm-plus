@@ -1,4 +1,0 @@
-const PODCAST_LINK_SELECTOR = "feedcell";
-const PODCAST_LIST_HEADER_SELECTOR = "ocseparatorbar";
-
-export default { PODCAST_LINK_SELECTOR, PODCAST_LIST_HEADER_SELECTOR };
