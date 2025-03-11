@@ -1,4 +1,4 @@
-import Constants from "./constants";
+import Constants from "~/constants";
 
 const fetchPage = async (path: string) => {
   console.log("fetching page:", path);

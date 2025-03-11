@@ -15,6 +15,7 @@
     "happy-dom": "^17.4.3",
     "typescript": "^5.8.2",
     "vite": "^6.2.0",
+    "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.8"
   }
 }

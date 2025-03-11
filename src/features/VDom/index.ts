@@ -1,11 +1,12 @@
-import { pipe } from "./utils";
+import { pipe } from "~/utils";
+import VDomArray from "./VDomArray";
 
 function b(node: Element): VDomElement {
   if (node.children.length <= 0) {
     return createElementObject(node);
   }
 
-  const children = Array.from(node.children).map((child) => {
+  const children = VDomArray.from(node.children).map((child) => {
     return b(child);
   });
 
@@ -44,6 +45,17 @@ function getBody(doc: Document) {
 function parseDom(html: string) {
   const parser = new DOMParser();
   return parser.parseFromString(html, "text/html");
+}
+
+export function removeEmptyElements(
+  domObject: VDomElement,
+  parent: VDomElement | null
+) {
+  if (!domObject.children && !domObject.textContent) {
+    console.log(parent);
+  }
+
+  domObject;
 }
 
 export default { buildTreeFromHtml };

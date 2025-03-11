@@ -1,7 +1,7 @@
-import LayoutUpdater from "./LayoutUpdater";
-import PageHandler from "./PageHandler";
-import VirtualDom from "./VirtualDom";
-import "./ocfm-plus.css";
+import LayoutUpdater from "~/services/LayoutUpdater";
+import PageHandler from "~/services/PageHandler";
+import VirtualDom from "~/services/VirtualDom";
+import "~/ocfm-plus.css";
 
 const { pathname } = location;
 
@@ -12,8 +12,9 @@ if (pathname === "/podcasts") {
   const html = document.querySelector("html");
   if (html) {
     console.log("building virtual dom");
-    const vdom = VirtualDom.buildTreeFromHtml(html.getHTML());
-    console.log(vdom);
+    // const vdom = VirtualDom.buildTreeFromHtml(html.getHTML());
+
+    VirtualDom.getPodcastLists();
   }
 }
 

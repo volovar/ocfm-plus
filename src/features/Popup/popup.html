@@ -3,18 +3,19 @@
   <head>
     <title>OCFM+ Popup</title>
   </head>
-  <body class="popup">
-    <div class="content">
-      <h3>OCFM+ Player</h3>
+  <body class="ocfmp-popup">
+    <div class="ocfmp-popup-content">
+      <h3 class="ocfmp-popup-header">OCFM+ Player</h3>
     </div>
-    <template id="player">
+    <template id="mini-player">
       <div>
         <p>player goes here</p>
       </div>
     </template>
     <template id="no-active-tab">
       <div>
-        <p>no overcast tab</p>
+        <p class="ocfmp-text">no overcast tab</p>
+        <button class="ocfmp-popup-button">Open Overcast</button>
       </div>
     </template>
     <script type="module" src="popup.ts"></script>

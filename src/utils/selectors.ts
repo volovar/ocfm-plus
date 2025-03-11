@@ -1,4 +1,7 @@
-function checkedQuerySelector(parent: Document | Element, selector: string) {
+function checkedQuerySelector(
+  parent: Document | DocumentFragment | Element,
+  selector: string
+) {
   const elem = parent.querySelector(selector);
 
   if (!elem) {
@@ -9,7 +12,7 @@ function checkedQuerySelector(parent: Document | Element, selector: string) {
 }
 
 export function typedQuerySelector<T extends typeof Element>(
-  parent: Document | Element,
+  parent: Document | DocumentFragment | Element,
   type: T,
   selector: string
 ) {

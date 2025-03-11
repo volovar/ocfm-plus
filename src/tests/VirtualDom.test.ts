@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import VirtualDom from "../VirtualDom";
+import VirtualDom from "~/services/VirtualDom";
 
 const htmlObjectStub: VDomElement = {
   type: "HTML",

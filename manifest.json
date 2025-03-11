@@ -4,7 +4,7 @@
   "short_name": "ocfm+",
   "description": "Enhances overcast.fm functionality, styling and layout",
   "version": "2.0",
-  "author": { "email": "gunblade2112@gmail.com" },
+  "author": { "email": "michaelvolovar@gmail.com" },
   "icons": {
     "16": "src/assets/images/icon16.png",
     "48": "src/assets/images/icon48.png",
@@ -15,7 +15,7 @@
       "19": "src/assets/images/icon19.png",
       "38": "src/assets/images/icon38.png"
     },
-    "default_popup": "src/popup/popup.html",
+    "default_popup": "src/features/Popup/popup.html",
     "default_title": "New Version!"
   },
   "background": {

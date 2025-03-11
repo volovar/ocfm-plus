@@ -1,0 +1,8 @@
+:root {
+  --dark-mode-bg: #202d36;
+  --dark-mode-text: var(--light-text);
+  --dark-text: #222222;
+  --light-mode-bg: #f2f5f7;
+  --light-mode-text: var(--dark-text);
+  --light-text: #f1f1f1;
+}

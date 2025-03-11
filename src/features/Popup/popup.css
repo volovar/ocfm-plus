@@ -1,0 +1,18 @@
+@import "../../assets/styles/colors.css";
+
+.ocfmp-popup {
+  background: var(--light-mode-bg);
+  color: var(--light-mode-text);
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+  width: 15rem;
+
+  &.dark {
+    background: var(--dark-mode-bg);
+    color: var(--dark-mode-text);
+  }
+
+  .ocfmp-popup-header {
+    margin: 0;
+  }
+}

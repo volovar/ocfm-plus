@@ -27,4 +27,9 @@ export async function hasOvercastTab() {
   return tabs.some((tab) => tab.url?.includes("overcast.fm/podcasts"));
 }
 
-export default { getTabs, getTabId, hasOvercastTab };
+export function openNewTab() {
+  const url = "https://overcast.fm/";
+  chrome.tabs.create({ url });
+}
+
+export default { getTabs, getTabId, hasOvercastTab, openNewTab };
