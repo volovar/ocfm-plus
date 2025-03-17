@@ -1,4 +1,4 @@
-import { pipe, typedQuerySelector } from "../utils";
+import { pipe } from "../utils";
 
 function buildDomElement(node: Element): VDomElement {
   if (node.children.length <= 0) {
@@ -55,39 +55,9 @@ function getNavObject(vDom: VDomElement) {
   return findNodeByClassName(vDom, "nav");
 }
 
-function getPodcastLists() {
-  let podcastParent;
-  try {
-    podcastParent = typedQuerySelector(
-      document,
-      HTMLDivElement,
-      ".pure-u-1.pure-u-sm-3-5"
-    );
-  } catch (error) {
-    console.error(error);
-    return;
-  }
-
-  const children = Array.from(podcastParent.children);
-  let indexes: number[] = [];
-
-  for (let [i, child] of children.entries()) {
-    if (child.classList.contains("ocseparatorbar")) {
-      indexes.push(i);
-    }
-  }
-
-  const tabs = indexes.reduce((tabs, _, i): Element[][] => {
-    const tab = children.slice(indexes[i], indexes[i + 1]);
-    return [...tabs, tab];
-  }, []);
-
-  return tabs;
-}
-
 function parseDom(html: string) {
   const parser = new DOMParser();
   return parser.parseFromString(html, "text/html");
 }
 
-export default { buildTreeFromHtml, getNavObject, getPodcastLists };
+export default { buildTreeFromHtml, getNavObject };

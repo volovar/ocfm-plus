@@ -5,7 +5,7 @@ function checkedQuerySelector(
   const elem = parent.querySelector(selector);
 
   if (!elem) {
-    throw new Error(`no elem found for ${selector}`);
+    throw new Error(`no element found for ${selector}`);
   }
 
   return elem;
